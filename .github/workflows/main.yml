@@ -1,0 +1,24 @@
+name: go fortune workflows
+
+on:
+  push:
+    branches:
+      - 'v[0-9]+.[0-9]'
+
+jobs:
+  go-fortune:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Test
+      run: |
+        pwd
+        ls -al
+    - name: try checkout
+      uses: actions/checkout@v3
+    - name: Test
+      run:
+        pwd
+        ls -al
+
+
