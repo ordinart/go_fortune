@@ -8,6 +8,7 @@ on:
 
 jobs:
   go-fortune:
+    if: "!contains(github.event.head_commits.message, '#NORUN')"
     runs-on: ubuntu-latest
 
     steps:
@@ -107,7 +108,6 @@ jobs:
     env:
       SLACK_WEBHOOK_URL: ${{ secrets.TEST_SUBMIT }}
       SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
-
 
 
 
