@@ -107,7 +107,7 @@ jobs:
    
 
     env:
-      SLACK_WEBHOOK_URL: ${{ secrets.TEST_SUBMIT }}
+      SLACK_WEBHOOK_URL: ${{ secrets.SUBMISSION }}
       SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
 
 
