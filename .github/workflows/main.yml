@@ -9,7 +9,7 @@ on:
 jobs:
   go-fortune:
     #if: "!contains(github.event.head_commits.message, '#NORUN')" # this doesn't work
-    if: "!contains(github.event.commits.message[0], '#NORUN')"
+    if: "!contains(github.event.commits[0].message, '#NORUN')"
     runs-on: ubuntu-latest
 
     steps:
